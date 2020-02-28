@@ -1,7 +1,7 @@
 # Viz-RadialBarChart
 Radial Bar Chart in Unity.
 
-![Screenshot](https://github.com/KadekSatriadi/Viz-RadialBarChart/raw/master/radialbarchart.png)
+[![Everything Is AWESOME](https://github.com/KadekSatriadi/Viz-RadialBarChart/raw/master/radialbarchart.png)](https://www.youtube.com/embed/bdiMbEp16Zo "Radial Bar Chart Unity")
 
 Add RadialBarChart.cs to a gameobject. 
 
