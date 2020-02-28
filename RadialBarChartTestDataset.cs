@@ -2,25 +2,31 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RadialBarChartTest : MonoBehaviour
+public class RadialBarChartTestDataset : MonoBehaviour
 {
     public RadialBarChart barchart;
-    public int nbars;
-    public float max;
-    public float min;
+    public SQLiteDatabase database;
+    public string labelQuantitative;
+    public string condition;
     public bool realtimeUpdate = false;
     List<float> data = new List<float>();
     // Update is called once per frame
+
+    private void Start()
+    {
+        if(condition.Length > 0)
+        {
+            data = database.GetFloatRecordsByField(labelQuantitative, condition);
+        }
+        else
+        {
+            data = database.GetFloatRecordsByField(labelQuantitative);
+        }
+    }
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space))
-        {
-            data = new List<float>();
-            for(int i = 0; i < nbars; i++)
-            {
-                data.Add(Random.Range(min, max));
-            }
-
+        {          
             UpdateChart();
         }
 
