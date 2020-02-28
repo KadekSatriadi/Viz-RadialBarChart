@@ -13,3 +13,8 @@ Dependency: https://github.com/rizasif/sqlite-unity-plugin
 3. To refresh the table and column name list, disable and enable the SQLiteDatabase.cs script.
 
 ![Screenshot SQLiteDatabase](https://github.com/KadekSatriadi/Viz-RadialBarChart/raw/master/screenshotdb.png)
+
+
+Acknowledgements:
+
+1. Procedural plane: https://wiki.unity3d.com/index.php/ProceduralPrimitives
