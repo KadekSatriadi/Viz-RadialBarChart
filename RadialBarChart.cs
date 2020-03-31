@@ -66,6 +66,7 @@ public class RadialBarChart : MonoBehaviour
             line.widthMultiplier = axisLineWidth;
             line.useWorldSpace = false;
             line.material.color = axisLineColor;
+            line.loop = true;
             List<Vector3> points = GetCircularPoints(radius + (tickness / axisLinesCount) * i, g.transform.position, axisLineResolution);
             line.positionCount = points.Count;
             line.SetPositions(points.ToArray());
@@ -74,7 +75,6 @@ public class RadialBarChart : MonoBehaviour
         }
 
         axisLine.transform.localRotation = Quaternion.Euler(axisLine.localRotation.x, axisLine.localRotation.y, rotation);
-        axisLine.GetComponent<LineRenderer>().loop = true;
     }
 
     private List<Vector3> GetCircularPoints(float radius, Vector3 center,  int resolution)
