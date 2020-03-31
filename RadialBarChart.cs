@@ -74,6 +74,7 @@ public class RadialBarChart : MonoBehaviour
         }
 
         axisLine.transform.localRotation = Quaternion.Euler(axisLine.localRotation.x, axisLine.localRotation.y, rotation);
+        axisLine.GetComponent<LineRenderer>().loop = true;
     }
 
     private List<Vector3> GetCircularPoints(float radius, Vector3 center,  int resolution)
